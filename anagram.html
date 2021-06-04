@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function sortString(str) {
+        var arr = str.split("");
+        var sorted = arr.sort();
+        return sorted.join("");
+      }
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript String Properties</h2>
+
+    <p id="testString"></p>
+
+    <p id="demo"></p>
+
+    <script>
+      var txt =
+        "Jeff tried to study his education, but the room was so dusty he became stressed. So instead, he ate desserts and then was cautioned";
+      var res = txt.replace(/,/g, "");
+      console.log(res);
+      var newTxt = res.replace(".", "");
+      console.log(newTxt);
+      var newTxtLowercase = newTxt.toLowerCase();
+
+      document.getElementById("demo").innerHTML = newTxtLowercase;
+      var myStr = newTxtLowercase.split(" ");
+      //document.getElementById("test").innerHTML = myStr;
+      var sln = myStr.length;
+      console.log(sln);
+
+      for (var j = 0; j < sln; j++) {
+        //console.log("j is " + myStr[j]);
+
+        for (var i = j + 1; i < sln; i++) {
+          if (myStr[j].length == myStr[i].length) {
+            var match = myStr[i];
+            //console.log("match is " + match);
+            sortString(match);
+            // console.log("sorted is " + sortString(match));
+            // sort first word
+            var firstWord = myStr[j];
+            sortString(firstWord);
+            // console.log("jtest is " + sortString(firstWord));
+            if (sortString(match) == sortString(firstWord)) {
+              /*  console.log(
+                "it is an anagram " +
+                  sortString(match) +
+                  " " +
+                  sortString(firstWord)
+              );*/
+              console.log(myStr[i] + " is an anagram with " + myStr[j]);
+            }
+          } else {
+            // console.log("no matches");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

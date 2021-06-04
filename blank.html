@@ -20,7 +20,9 @@
         box-sizing: border-box;
       }
       #Flex {
-        display: flex;
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         margin: auto;
         padding: 5px;
         background-color: #ddd;
@@ -37,19 +39,28 @@
       }
       #Flex .box p {
         margin: 0;
-        padding: 5px;
+        padding: 50px;
       }
       #Flex #RedBox {
         background-color: red;
+        width: 30%;
+        height: 100%;
       }
       #Flex #BlueBox {
         background-color: blue;
+        width: 30%;
+        height: 100%;
       }
       #Flex #GreenBox {
         background-color: green;
+
+        width: 30%;
+        height: 50%;
       }
       #Flex #OrangeBox {
         background-color: orange;
+        width: 30%;
+        height: 50%;
       }
 
       @media only screen and (max-width: 1000px) {
@@ -88,13 +99,14 @@
         </div>
         <div id="BlueBox" class="box">
           <p>BLUE BOX</p>
-          <p>
+          <p style="align-self: center">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </p>
           <p>BLUE BOX</p>
         </div>
+
         <div id="GreenBox" class="box">
           <p>GREEN BOX</p>
         </div>
