@@ -39,7 +39,8 @@
       }
       #Flex .box p {
         margin: 0;
-        padding: 50px;
+        padding: 80px;
+        text-align: center;
       }
       #Flex #RedBox {
         background-color: red;
@@ -60,24 +61,44 @@
       #Flex #OrangeBox {
         background-color: orange;
         width: 30%;
-        height: 50%;
+        height: 47%;
       }
 
       @media only screen and (max-width: 1000px) {
         #GreyWrapper {
         }
         #Flex {
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: column;
         }
         #Flex .box {
           font-size: 1.1rem;
         }
+        #Flex .box p {
+          margin: 0;
+          padding: 10px;
+          text-align: center;
+        }
         #Flex #RedBox {
+          width: 100%;
+          height: 100%;
+          order: 4;
         }
         #Flex #BlueBox {
+          width: 100%;
+          height: 100%;
+          order: 2;
         }
         #Flex #GreenBox {
+          width: 100%;
+          height: 100%;
+          order: 3;
         }
         #Flex #OrangeBox {
+          width: 100%;
+          height: 100%;
+          order: 1;
         }
       }
     </style>
@@ -112,7 +133,7 @@
         </div>
         <div id="OrangeBox" class="box">
           <p>ORANGE BOX</p>
-          <p>
+          <p style="padding: 10px">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
