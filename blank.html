@@ -20,13 +20,10 @@
         box-sizing: border-box;
       }
       #Flex {
-        display: inline-flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         margin: auto;
         padding: 5px;
         background-color: #ddd;
-        height: 100%;
+        height: 98%;
         box-sizing: border-box;
       }
       #Flex .box {
@@ -36,69 +33,67 @@
         margin: 5px;
         background-color: #777;
         padding: 10px;
+        text-align: center;
       }
       #Flex .box p {
         margin: 0;
-        padding: 80px;
-        text-align: center;
       }
       #Flex #RedBox {
         background-color: red;
-        width: 30%;
-        height: 100%;
+        /* added */
+        display: block;
+        width: 32%;
+        height: 96%;
+        float: left;
+      }
+      #Flex #RedBox p {
+        padding: 90px;
       }
       #Flex #BlueBox {
         background-color: blue;
-        width: 30%;
-        height: 100%;
+        /* added */
+        display: block;
+        width: 32%;
+        height: 96%;
+        float: left;
+      }
+      #Flex #BlueBox p {
+        padding: 110px;
       }
       #Flex #GreenBox {
         background-color: green;
-
-        width: 30%;
-        height: 50%;
+        height: 46%;
+        width: 31%;
+        float: left;
+      }
+      #Flex #GreenBox p {
+        padding: 195px;
       }
       #Flex #OrangeBox {
         background-color: orange;
-        width: 30%;
-        height: 47%;
+        height: 46%;
+        width: 31%;
+        float: left;
+      }
+      #Flex #OrangeBox p {
+        padding: 47px;
       }
 
       @media only screen and (max-width: 1000px) {
         #GreyWrapper {
         }
         #Flex {
-          display: flex;
-          flex-wrap: nowrap;
-          flex-direction: column;
         }
         #Flex .box {
           font-size: 1.1rem;
         }
-        #Flex .box p {
-          margin: 0;
-          padding: 10px;
-          text-align: center;
-        }
         #Flex #RedBox {
-          width: 100%;
-          height: 100%;
-          order: 4;
         }
         #Flex #BlueBox {
-          width: 100%;
-          height: 100%;
-          order: 2;
         }
         #Flex #GreenBox {
-          width: 100%;
-          height: 100%;
-          order: 3;
         }
         #Flex #OrangeBox {
-          width: 100%;
-          height: 100%;
-          order: 1;
         }
       }
     </style>
@@ -120,20 +115,20 @@
         </div>
         <div id="BlueBox" class="box">
           <p>BLUE BOX</p>
-          <p style="align-self: center">
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </p>
           <p>BLUE BOX</p>
         </div>
-
+        <!--  <div style="float: left; display: block; width: 30%">-->
         <div id="GreenBox" class="box">
           <p>GREEN BOX</p>
         </div>
         <div id="OrangeBox" class="box">
           <p>ORANGE BOX</p>
-          <p style="padding: 10px">
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
