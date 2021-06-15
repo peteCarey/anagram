@@ -20,9 +20,6 @@
         box-sizing: border-box;
       }
       #Flex {
-        display: inline-flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         margin: auto;
         padding: 5px;
         background-color: #ddd;
@@ -36,32 +33,65 @@
         margin: 5px;
         background-color: #777;
         padding: 10px;
+        text-align: center;
+        float: left;
+        height: 99%;
+        width: 32%;
+        box-sizing: border-box;
       }
       #Flex .box p {
         margin: 0;
-        padding: 80px;
-        text-align: center;
+        padding-top: 10%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+        padding-left: 10%;
+        box-sizing: border-box;
       }
       #Flex #RedBox {
         background-color: red;
-        width: 30%;
-        height: 100%;
       }
+      #Flex #RedBox p {
+        padding-top: 10%;
+        padding-right: 5%; /* 40px*/
+        padding-bottom: 22%; /* 191px*/
+        padding-left: 5%; /* 40px*/
+        box-sizing: border-box;
+      }
+
       #Flex #BlueBox {
         background-color: blue;
-        width: 30%;
-        height: 100%;
       }
+      #Flex #BlueBox p {
+        padding-top: 10%;
+        padding-right: 7%; /* 15px*/
+        padding-bottom: 40%; /* 304px*/
+        padding-left: 7%; /* 15px*/
+        box-sizing: border-box;
+      }
+
       #Flex #GreenBox {
         background-color: green;
-
-        width: 30%;
-        height: 50%;
+        height: 49%;
+        box-sizing: border-box;
       }
+      #Flex #GreenBox p {
+        padding-top: 30%; /* 168px*/
+        padding-right: 10%;
+        padding-bottom: 10%;
+        padding-left: 10%;
+        box-sizing: border-box;
+      }
+
       #Flex #OrangeBox {
         background-color: orange;
-        width: 30%;
-        height: 47%;
+        height: 49%;
+      }
+      #Flex #OrangeBox p {
+        padding-top: 5%; /* 10px*/
+        padding-right: 10%;
+        padding-bottom: 10%; /* 104px*/
+        padding-left: 10%;
+        box-sizing: border-box;
       }
 
       @media only screen and (max-width: 1000px) {
@@ -74,31 +104,73 @@
         }
         #Flex .box {
           font-size: 1.1rem;
+          height: 20%;
+          width: 100%;
+          box-sizing: border-box;
         }
         #Flex .box p {
           margin: 0;
-          padding: 10px;
+          padding-top: 0%;
+          padding-right: 10%;
+          padding-bottom: 5%;
+          padding-left: 10%;
           text-align: center;
+
+          box-sizing: border-box;
         }
         #Flex #RedBox {
-          width: 100%;
-          height: 100%;
           order: 4;
         }
+        #Flex #RedBox p {
+          margin: 0;
+          padding-top: 0%;
+          padding-right: 10%;
+          padding-bottom: 2%;
+          padding-left: 10%;
+          text-align: center;
+
+          box-sizing: border-box;
+        }
+
         #Flex #BlueBox {
-          width: 100%;
-          height: 100%;
           order: 2;
         }
+        #Flex #BlueBox p {
+          margin: 0;
+          padding-top: 0%;
+          padding-right: 10%;
+          padding-bottom: 3%;
+          padding-left: 10%;
+          text-align: center;
+
+          box-sizing: border-box;
+        }
+
         #Flex #GreenBox {
-          width: 100%;
-          height: 100%;
           order: 3;
         }
+        #Flex #GreenBox p {
+          margin: 0;
+          padding-top: 8%;
+          padding-right: 10%;
+          padding-bottom: 0%;
+          padding-left: 10%;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
         #Flex #OrangeBox {
-          width: 100%;
-          height: 100%;
           order: 1;
+        }
+        #Flex #OrangeBox p {
+          margin: 0;
+          padding-top: 0%;
+          padding-right: 10%;
+          padding-bottom: 4%;
+          padding-left: 10%;
+          text-align: center;
+
+          box-sizing: border-box;
         }
       }
     </style>
@@ -120,7 +192,7 @@
         </div>
         <div id="BlueBox" class="box">
           <p>BLUE BOX</p>
-          <p style="align-self: center">
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
@@ -133,7 +205,7 @@
         </div>
         <div id="OrangeBox" class="box">
           <p>ORANGE BOX</p>
-          <p style="padding: 10px">
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
