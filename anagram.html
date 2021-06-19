@@ -4,38 +4,41 @@
     <h2>Anagrams</h2>
     <p id="demo"></p>
     <script>
-      var txt =
+      let txt =
         "Jeff tried to study his education, but the room was so dusty he became stressed. So instead, he ate desserts and then was cautioned";
       document.getElementById("demo").innerHTML = txt;
-      var res = txt.replace(/,/g, "");
-      var newTxt = res.replace(".", "");
-      var newTxtLowercase = newTxt.toLowerCase();
-      var myStr = newTxtLowercase.split(" ");
-      var sln = myStr.length;
-      for (var j = 0; j < sln; j++) {
-        for (var i = j + 1; i < sln; i++) {
-          if (myStr[j].length == myStr[i].length) {
-            var match = myStr[i];
-            sortString(match);
-            var firstWord = myStr[j]; // sort first word
-            sortString(firstWord);
-            if (sortString(match) == sortString(firstWord)) {
-              var n = match.localeCompare(firstWord);
-              if (n != 0) {
-                var anagrams = [];
-                anagrams.push(myStr[i], myStr[j]);
-                console.log(anagrams);
+      getAnagrams(txt);
+      function getAnagrams(txt) {
+        let res = txt.replace(/,/g, "");
+        let newTxt = res.replace(".", "");
+        let newTxtLowercase = newTxt.toLowerCase();
+        let myStr = newTxtLowercase.split(" ");
+        let sln = myStr.length;
+        let anagrams = [];
+        for (let j = 0; j < sln; j++) {
+          for (let i = j + 1; i < sln; i++) {
+            if (myStr[j].length == myStr[i].length) {
+              let match = myStr[i];
+              sortString(match);
+              let firstWord = myStr[j]; // sort first word
+              sortString(firstWord);
+              if (sortString(match) == sortString(firstWord)) {
+                let n = match.localeCompare(firstWord);
+                if (n != 0) {
+                  anagrams.push([myStr[i], myStr[j]]);
+                }
               }
+            } else {
+              // console.log("no matches");
             }
-          } else {
-            // console.log("no matches");
           }
         }
+        console.log(anagrams);
+        return anagrams;
       }
-
       function sortString(str) {
-        var arr = str.split("");
-        var sorted = arr.sort();
+        let arr = str.split("");
+        let sorted = arr.sort();
         return sorted.join("");
       }
     </script>

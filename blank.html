@@ -6,7 +6,14 @@
     <meta name="description" content="CSS - Land of Beds" />
     <meta name="viewport" content="width=device-width" />
     <style type="text/css">
-      html,
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
       body {
         padding: 0;
         margin: 0;
@@ -37,63 +44,48 @@
         float: left;
         height: 99%;
         width: 32%;
-        box-sizing: border-box;
       }
       #Flex .box p {
         margin: 0;
-        padding-top: 10%;
-        padding-right: 10%;
-        padding-bottom: 10%;
-        padding-left: 10%;
-        box-sizing: border-box;
       }
       #Flex #RedBox {
         background-color: red;
       }
       #Flex #RedBox p {
         padding-top: 10%;
-        padding-right: 5%; /* 40px*/
-        padding-bottom: 22%; /* 191px*/
-        padding-left: 5%; /* 40px*/
-        box-sizing: border-box;
+        padding-right: 5%;
+        padding-bottom: 22%;
+        padding-left: 5%;
       }
-
       #Flex #BlueBox {
         background-color: blue;
       }
       #Flex #BlueBox p {
         padding-top: 10%;
-        padding-right: 7%; /* 15px*/
-        padding-bottom: 40%; /* 304px*/
-        padding-left: 7%; /* 15px*/
-        box-sizing: border-box;
+        padding-right: 7%;
+        padding-bottom: 40%;
+        padding-left: 7%;
       }
-
       #Flex #GreenBox {
         background-color: green;
         height: 49%;
-        box-sizing: border-box;
       }
       #Flex #GreenBox p {
-        padding-top: 30%; /* 168px*/
+        padding-top: 30%;
         padding-right: 10%;
         padding-bottom: 10%;
         padding-left: 10%;
-        box-sizing: border-box;
       }
-
       #Flex #OrangeBox {
         background-color: orange;
         height: 49%;
       }
       #Flex #OrangeBox p {
-        padding-top: 5%; /* 10px*/
+        padding-top: 5%;
         padding-right: 10%;
-        padding-bottom: 10%; /* 104px*/
+        padding-bottom: 10%;
         padding-left: 10%;
-        box-sizing: border-box;
       }
-
       @media only screen and (max-width: 1000px) {
         #GreyWrapper {
         }
@@ -104,19 +96,11 @@
         }
         #Flex .box {
           font-size: 1.1rem;
-          height: 20%;
+          height: 25%;
           width: 100%;
-          box-sizing: border-box;
         }
         #Flex .box p {
           margin: 0;
-          padding-top: 0%;
-          padding-right: 10%;
-          padding-bottom: 5%;
-          padding-left: 10%;
-          text-align: center;
-
-          box-sizing: border-box;
         }
         #Flex #RedBox {
           order: 4;
@@ -128,10 +112,7 @@
           padding-bottom: 2%;
           padding-left: 10%;
           text-align: center;
-
-          box-sizing: border-box;
         }
-
         #Flex #BlueBox {
           order: 2;
         }
@@ -142,10 +123,7 @@
           padding-bottom: 3%;
           padding-left: 10%;
           text-align: center;
-
-          box-sizing: border-box;
         }
-
         #Flex #GreenBox {
           order: 3;
         }
@@ -156,9 +134,7 @@
           padding-bottom: 0%;
           padding-left: 10%;
           text-align: center;
-          box-sizing: border-box;
         }
-
         #Flex #OrangeBox {
           order: 1;
         }
@@ -169,8 +145,6 @@
           padding-bottom: 4%;
           padding-left: 10%;
           text-align: center;
-
-          box-sizing: border-box;
         }
       }
     </style>
@@ -199,7 +173,6 @@
           </p>
           <p>BLUE BOX</p>
         </div>
-
         <div id="GreenBox" class="box">
           <p>GREEN BOX</p>
         </div>
